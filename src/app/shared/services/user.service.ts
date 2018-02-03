@@ -64,6 +64,7 @@ export class UserService {
     return this.apiService.post('/users' + route, {user: credentials})
     .map(
       data => {
+        console.log('data: '+ JSON.stringify(data));
         this.setAuth(data.user);
         return data;
       }

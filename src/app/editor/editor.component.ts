@@ -26,6 +26,13 @@ export class EditorComponent implements OnInit {
       title: '',
       description: '',
       body: '',
+      problem: '',
+      solution: '',
+      usecases: '',
+      advantages: '',
+      disadvantages: '',
+      monetizationPlan: '',
+      plan: '' 
     });
     // Optional: subscribe to value changes on the form
     // this.articleForm.valueChanges.subscribe(value => this.updateArticle(value));

@@ -1,6 +1,5 @@
 import { Profile } from './profile.model';
-//problem only
-//related idea
+
 export class Article {
   slug: string;
   title = '';

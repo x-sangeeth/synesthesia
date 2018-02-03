@@ -12,21 +12,21 @@
               <input class="form-control form-control-lg"
                 formControlName="title"
                 type="text"
-                placeholder="Article Title" />
+                placeholder="Idea Title" />
             </fieldset>
 
             <fieldset class="form-group">
               <input class="form-control"
                 formControlName="description"
                 type="text"
-                placeholder="What's this article about?" />
+                placeholder="What's this Idea about?" />
             </fieldset>
 
             <fieldset class="form-group">
               <textarea class="form-control"
                 formControlName="body"
                 rows="8"
-                placeholder="Write your article (in markdown)">
+                placeholder="Write your Idea (in markdown)">
               </textarea>
             </fieldset>
 
@@ -46,8 +46,57 @@
               </div>
             </fieldset>
 
+            <fieldset class="form-group">
+              <input class="form-control"
+                formControlName="problem"
+                rows="2"
+                placeholder="What's the real world problem?" />
+            </fieldset>
+
+            <fieldset class="form-group">
+              <input class="form-control"
+                formControlName="solution"
+                rows="2"
+                placeholder="What's the basic solution to problem?" />
+            </fieldset>
+
+            <fieldset class="form-group">
+              <input class="form-control"
+                formControlName="usecases"
+                rows="4"
+                placeholder="List use cases here.." />
+            </fieldset>
+
+            <fieldset class="form-group">
+              <input class="form-control"
+                formControlName="advantages"
+                rows="4"
+                placeholder="List advantages (Other than solution).." />
+            </fieldset>
+
+            <fieldset class="form-group">
+              <input class="form-control"
+                formControlName="disadvantages"
+                rows="4"
+                placeholder="List disadvantages.." />
+            </fieldset>
+
+            <fieldset class="form-group">
+              <input class="form-control"
+                formControlName="monetizationPlan"
+                rows="2"
+                placeholder="How will you monitize?" />
+            </fieldset>
+
+            <fieldset class="form-group">
+              <input class="form-control"
+                formControlName="plan"
+                rows="4"
+                placeholder="Execution Plan?" />
+            </fieldset> 
+
             <button class="btn btn-lg pull-xs-right btn-primary" type="button" (click)="submitForm()">
-              Publish Article
+              Share
             </button>
 
           </fieldset>

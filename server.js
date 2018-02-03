@@ -4,6 +4,8 @@ const http = require('http');
 var bodyParser = require("body-parser");
 var passport = require('passport');
 var mongodb = require("mongodb");
+var cors = require('cors');
+
 var ObjectID = mongodb.ObjectID;
 
 require('./server/config/db');
@@ -18,7 +20,10 @@ var app = express();
 app.use(express.static(path.join(__dirname, 'dist')));
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
+
+//use if needed
+app.use(cors({origin: 'http://localhost:4200'}));
 
 // Set our api routes
 app.use(passport.initialize());

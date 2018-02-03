@@ -8,12 +8,14 @@ var auth = jwt({
 
 var ctrlProfile = require('../controllers/profiles');
 var ctrlAuth = require('../controllers/authentication');
+var cntrlArticle = require('../controllers/articles');
 
-// profile
+//authenticated routes
 router.get('/profile', auth, ctrlProfile.profileRead);
+//router.get('/articles', auth, cntrlArticle.articleSave);
 
 // authentication
 router.post('/users', ctrlAuth.register);
-router.post('/login', ctrlAuth.login);
+router.post('/users/login', ctrlAuth.login);
 
 module.exports = router;
