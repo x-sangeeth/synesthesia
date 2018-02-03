@@ -1,41 +1,28 @@
 var mongoose = require( 'mongoose' );
 
+var User = mongoose.model('User');
+
 mongoose.Promise = global.Promise;
-/*
-slug: string;
-  title = '';
-  description = '';
-  body = '';
-  tagList: Array<string> = [];
-  problem = '';
-  solution = '';
-  usecases = '';
-  advantages = '';
-  disadvantages = '';
-  monetizationPlan = '';
-  plan = '';
-  images: Array<string> = [];
-  createdAt: string;
-  updatedAt: string;
-  favorited: boolean;
-  favoritesCount: number;
-  author: Profile;
-*/
+
 var articleSchema = new mongoose.Schema({
-    email: {
-      type: String,
-      unique: true,
-      required: true
-    },
-    username: {
-      type: String,
-      required: true
-    },
-    hash: String,
-    salt: String,
-    token: String,
-    bio: String,
-    image: String
+  slug: String,
+  title : String,
+  description : String,
+  body : String,
+  tagList: Array<String>[],
+  problem : String,
+  solution : String,
+  usecases : String,
+  advantages : String,
+  disadvantages : String,
+  monetizationPlan : String,
+  plan : String,
+  images: Array<String>[],
+  createdAt:  String,
+  updatedAt:  String,
+  favorited:  String,
+  favoritesCount:  String,
+  author: User
   });
 
-  mongoose.model('User', articleSchema);
+  mongoose.model('Article', articleSchema);
