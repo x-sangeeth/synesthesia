@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 var Article = mongoose.model('Article');
-
+/*
 module.exports.articleRead = function(req, res) {
 
   // If no user ID exists in the JWT return a 401
@@ -18,8 +18,9 @@ module.exports.articleRead = function(req, res) {
   }
 
 };
-
+*/
 module.exports.articleSave = function(req, res) {
+  console.log.err('sample');
   var article = new Article();
 
   user.username = req.body.user.username;

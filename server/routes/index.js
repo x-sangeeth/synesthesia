@@ -12,7 +12,8 @@ var cntrlArticle = require('../controllers/articles');
 
 //authenticated routes
 router.get('/profile', auth, ctrlProfile.profileRead);
-//router.get('/articles', auth, cntrlArticle.articleSave);
+
+router.post('/articles', auth, cntrlArticle.articleSave);
 
 // authentication
 router.post('/users', ctrlAuth.register);

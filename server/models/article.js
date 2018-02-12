@@ -9,7 +9,7 @@ var articleSchema = new mongoose.Schema({
   title : String,
   description : String,
   body : String,
-  tagList: Array<String>[],
+  tagList: [String],
   problem : String,
   solution : String,
   usecases : String,
@@ -17,12 +17,13 @@ var articleSchema = new mongoose.Schema({
   disadvantages : String,
   monetizationPlan : String,
   plan : String,
-  images: Array<String>[],
+  images: [String],
   createdAt:  String,
   updatedAt:  String,
   favorited:  String,
   favoritesCount:  String,
-  author: User
+  //TODO: update with User
+  author: String
   });
 
   mongoose.model('Article', articleSchema);
